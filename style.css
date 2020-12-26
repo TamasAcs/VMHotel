@@ -19,7 +19,7 @@ html {
   background-color: black;
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 10;
 }
 .nav {
   width: 70%;
@@ -339,6 +339,134 @@ a.border:hover {
   background-position: center;
 }
 
+/* rooms */
+#rooms{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  background-image: url(./images/featured.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+.rooms h1{
+  margin: 50px 0;
+  text-align: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  width: 20%;
+  padding-bottom: 10px;
+  border-bottom: 3px solid rgb(245, 226, 147);
+}
+.rooms_info{
+  width: 400px;
+  height: 450px;
+  text-align: center;
+  padding: 40px;
+  margin-top: 50px;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  background: linear-gradient(#b8b8b8d0, rgba(255,255,255,0.1));
+  border-radius: 5px;
+
+}
+.rooms_button{
+  margin-top: 80px;
+  width: 150px;
+  height: 50px;
+  border: 3px solid rgb(245, 226, 147);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background: transparent;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+}
+.rooms_button:hover{
+  background-color:  rgb(245, 226, 147);
+  cursor: pointer;
+  outline: none;
+  transition: 0.75s;
+  color: black;
+}
+
+#rooms_list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.rooms_container{
+  padding-top: 180px;
+  width: 80%;
+}
+.rooms_container h1{
+  font-size: 2rem;
+  font-weight: 500;
+  padding-bottom: 30px;
+}
+.rooms_select{
+  align-items: end;
+  display: grid;
+  grid-template-columns: repeat(5, 0.5fr);
+  width: 80%;
+  height: 140px;
+  padding: 0px 0 50px 0;
+  border-bottom: 2px solid lightgray;
+  border-top:2px solid  lightgray;
+}
+.room{
+  width: 100%;
+  height: 150px;
+}
+.rooms_select label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+}
+.rooms_select input {
+  height: 30px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  width: 170px;
+  background: transparent;
+  backdrop-filter: blur(5px);
+  border: 1px solid black;
+  outline: none;
+}
+.rooms_select input[type="number"] {
+  width: 120px;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Consolas, 'Courier New', monospace";
+}
+.rooms_select input[type="number"]::placeholder {
+  color: black;
+}
+.rooms_search {
+  align-items: center;
+  justify-items: center;
+  bottom: 0;
+  height: 30px;
+  width: 150px;
+  font-size: 1rem;
+  outline: none;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  letter-spacing: 2px;
+  font-family: "Consolas, 'Courier New', monospace";
+}
+.rooms_grid {
+  width: 120px;
+}
+
 /* see & do */
 
 #see_do {
@@ -373,7 +501,7 @@ a.border:hover {
   width: 400px;
   height: 250px;
   padding: 0 20px;
-  box-shadow: 5px 5px 10px 3px rgba(247, 225, 141, 0.747),
+  box-shadow: 
     -5px -5px 10px 3px rgba(0, 0, 0, 0.4);
   border-radius: 10px;
   transform-style: preserve-3d;
@@ -386,7 +514,7 @@ a.border:hover {
   top: 0;
   left: 0;
   border-radius: 10px;
-  background-color: white;
+  background-color: rgb(243, 241, 241);
   backface-visibility: hidden;
   transform-style: preserve-3d;
   transition: 1s ease-in-out;
@@ -496,7 +624,7 @@ a.border:hover {
   display: flex;
   justify-content: center;
   text-align: center;
-  background-color: rgb(235, 235, 235);
+  background: linear-gradient(#b8b8b8d0, rgba(255,255,255,0.3));
 }
 .guest_review {
   display: flex;
@@ -558,18 +686,19 @@ span.med_txt {
 
 #contact {
   width: 100%;
-  height: 120vh;
+  height: 130vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 100px;
   background-color: rgb(235, 235, 235);
+  position: relative;
 }
 .contact {
   width: 80%;
   height: 100px;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -624,9 +753,12 @@ input[id="email"] {
   outline: none;
   resize: none;
   font-size: 1.6rem;
-  padding-left: 10px;
+  padding: 10px 0 0 15px;
   margin-top: 10px;
   margin-bottom: 20px;
+}
+.form textarea::placeholder{
+  letter-spacing: 3px;
 }
 .form .submit {
   height: 2rem;
@@ -637,12 +769,13 @@ input[id="email"] {
   cursor: pointer;
   outline: none;
   font-weight: 500;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.747),
-    -2px -2px 2px rgba(255, 255, 255, 1);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.747);
 }
 
 .map {
   width: 100%;
+  position: absolute;
+  bottom: 0%;
 }
 iframe {
   width: 100%;
