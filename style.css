@@ -9,6 +9,22 @@ html {
   font-family: "Consolas, 'Courier New', monospace";
 }
 
+#myBtn{
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #f5e293;
+  color: black;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+}
+
 /* header */
 #nav {
   width: 100%;
@@ -74,9 +90,10 @@ a.border:hover {
   height: 100vh;
   width: 100%;
   top: 80px;
-  background: url(./images/needles.png);
+  background: url(./images/view.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: bottom;
 }
 .home {
   display: flex;
@@ -88,18 +105,18 @@ a.border:hover {
 }
 
 .date_select {
-  align-items: center;
+  align-items: end;
+  height: 100px;
   display: grid;
   grid-template-columns: repeat(5, 0.5fr);
   width: 60%;
   position: absolute;
-  top: 50%;
+  top: 20%;
   transform: translateY(-50%);
 }
 .date_select label {
-  font-size: 1.2rem;
-  font-weight: 600;
-  padding-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: 1000;
   text-transform: uppercase;
 }
 .date_select input {
@@ -107,9 +124,10 @@ a.border:hover {
   font-size: 1.5rem;
   text-transform: uppercase;
   width: 170px;
+  margin-top: 20px;
   background: transparent;
   backdrop-filter: blur(5px);
-  border: 1px solid black;
+  border: 3px solid black;
   outline: none;
 }
 .date_select input[type="number"] {
@@ -123,23 +141,26 @@ a.border:hover {
 .date_select input[type="number"]::placeholder {
   color: black;
 }
-.search {
-  position: absolute;
-  bottom: 0;
-  outline: none;
-  cursor: pointer;
-  letter-spacing: 2px;
-  font-family: "Consolas, 'Courier New', monospace";
-}
 .grid {
-  width: 120px;
+  width: 100%;
 }
 .home .search {
   height: 30px;
   width: 150px;
   border: none;
-  background-color: rgb(23, 23, 23);
+  background-color:black;
   color: white;
+  position: absolute;
+  bottom: 0;
+  outline: none;
+  cursor: pointer;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: "Consolas, 'Courier New', monospace";
+}
+.home button:hover{
+  background: rgb(37, 37, 37);
 }
 .home p {
   width: 400px;
@@ -398,10 +419,15 @@ a.border:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  overflow: auto;
+  padding-bottom: 100px;
 }
 .rooms_container{
+  font-family:'Montserrat', sans-serif;
   padding-top: 180px;
   width: 80%;
+  height: 100%;
 }
 .rooms_container h1{
   font-size: 2rem;
@@ -412,16 +438,13 @@ a.border:hover {
   align-items: end;
   display: grid;
   grid-template-columns: repeat(5, 0.5fr);
-  width: 80%;
-  height: 140px;
-  padding: 0px 0 50px 0;
-  border-bottom: 2px solid lightgray;
-  border-top:2px solid  lightgray;
-}
-.room{
   width: 100%;
-  height: 150px;
+  height: 140px;
+  padding: 25px 0 50px 0;
+  border-bottom: 3px solid lightgray;
+  border-top:3px solid  lightgray;
 }
+
 .rooms_select label {
   font-size: 1.2rem;
   font-weight: 600;
@@ -429,7 +452,7 @@ a.border:hover {
   text-transform: uppercase;
 }
 .rooms_select input {
-  height: 30px;
+  height: 40px;
   font-size: 1.5rem;
   text-transform: uppercase;
   width: 170px;
@@ -439,9 +462,8 @@ a.border:hover {
   outline: none;
 }
 .rooms_select input[type="number"] {
-  width: 120px;
-  font-size: 1.2rem;
-  margin-top: 20px;
+  width: 150px;
+  font-size: 1.4rem;
   text-align: center;
   text-transform: uppercase;
   font-family: "Consolas, 'Courier New', monospace";
@@ -453,18 +475,118 @@ a.border:hover {
   align-items: center;
   justify-items: center;
   bottom: 0;
-  height: 30px;
-  width: 150px;
-  font-size: 1rem;
+  height: 50px;
+  width: 200px;
+  font-size: 1.2rem;
   outline: none;
   cursor: pointer;
   background-color: black;
+  text-transform: uppercase;
+  font-weight: bold;
   color: white;
   letter-spacing: 2px;
   font-family: "Consolas, 'Courier New', monospace";
 }
+.rooms_search:hover{
+  background: rgb(37, 37, 37);
+}
 .rooms_grid {
-  width: 120px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.rooms_grid:last-child{
+  align-items: flex-end;
+}
+
+/* detailed rooms */
+
+.room{
+  width: 100%;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 0;
+  margin: 80px 0;
+  border-bottom: 3px solid lightgray;
+}
+.room ul{
+  padding: 20px 0 20px 20px;
+}
+.pic{
+  width: 300px;
+  height: 90%;
+  margin: 0 20px 0 0;
+  background-image: url(./images/family.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.info{
+  width: 800px;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.price{
+  width: 200px;
+  height: 100%;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.price p{
+  font-size: 1.4rem;
+  padding-bottom: 20px;
+}
+.price h1{
+  font-size: 3rem;
+}
+.price button{
+  width: 100%;
+  height: 50px;
+  color: white;
+  background: black;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+.price button:hover{
+  background: rgb(37, 37, 37);
+}
+.icons{
+  display: flex;
+  width: 100%;
+  height: 50px;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 40px;
+  border-top: 3px solid lightgray;
+}
+.icons img{
+  width: 40px;
+  height: 40px;
+  font-weight: 1000;
+  stroke: black;
+  stroke-width: 30;
+}
+.icons i{
+  font-size: 40px;
+}
+.icons .fridge, .work{
+  width: 60px;
+  height: 60px;
+}
+.info p,li{
+  font-size: 1.1rem;
+}
+.name{
+  font-size: 2rem;
+  padding-bottom: 10px;
 }
 
 /* see & do */
@@ -477,6 +599,7 @@ a.border:hover {
   align-items: center;
   text-align: center;
   padding-top: 50px;
+  background: linear-gradient(rgba(204, 204, 204, 0.363),#b8b8b8d0); 
 }
 #see_do h3 {
   margin: 50px 0;
