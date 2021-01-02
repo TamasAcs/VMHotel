@@ -134,6 +134,7 @@ a.border:hover {
   width: 120px;
   font-size: 1.2rem;
   margin-top: 20px;
+  padding-right: 10px;
   text-align: center;
   text-transform: uppercase;
   font-family: "Consolas, 'Courier New', monospace";
@@ -464,6 +465,7 @@ a.border:hover {
 .rooms_select input[type="number"] {
   width: 150px;
   font-size: 1.4rem;
+  padding-right: 10px;
   text-align: center;
   text-transform: uppercase;
   font-family: "Consolas, 'Courier New', monospace";
@@ -919,3 +921,12 @@ iframe {
 }
 
 /* TCs */
+
+
+
+.show {
+  display: flex;
+}
+.hide{
+  display: none;
+}

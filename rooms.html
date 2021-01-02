@@ -1,1058 +1,1212 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Rooms</title>
-</head>
-<body>
-    
-<section id="rooms_list">
-    <header id="nav">
-        <div class="banner">
-
-        </div>
+  </head>
+  <body>
+    <section id="rooms_list">
+      <header id="nav">
+        <div class="banner"></div>
         <div class="nav">
-            <ul>
-                <li><a href="./tc.html#news"> news</a></li>
-                <li><a href="/tc.html#last_minute">last minute deals</a></li>
-                <li class="active"><a href="#home">home</a></li>
-                <li><a href="#about">about</a></li>
-                <li><a href="#services">services</a></li>
-                <li><a href="#gallery">gallery</a></li>
-                <li><a href="#see_do">see & do</a></li>
-                <li><a href="./tc.html">T&C's</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="./rooms.html" class="border">Book a Room</a></li>
-            </ul>
+          <ul>
+            <li><a href="./tc.html#news"> news</a></li>
+            <li><a href="/tc.html#last_minute">last minute deals</a></li>
+            <li class="active"><a href="#home">home</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#services">services</a></li>
+            <li><a href="#gallery">gallery</a></li>
+            <li><a href="#see_do">see & do</a></li>
+            <li><a href="./tc.html">T&C's</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="./rooms.html" class="border">Book a Room</a></li>
+          </ul>
         </div>
-    </header>
+      </header>
 
-<div class="rooms_container">
+      <div class="rooms_container">
         <h1>Our Rooms</h1>
         <div class="rooms_select">
-            <div class="rooms_grid"><label for="start">Check in</label>
-                <input type="date" id="start" name="trip-start" required></div>
-            
-            <div class="rooms_grid"><label for="stop">Check out</label>
-                <input type="date" id="stop" name="trip-stop" required></div>
-            
-            <div class="rooms_grid">
-                <input type="number" id="adult" name="adult" placeholder="Adults"></div>
-            
-            <div class="rooms_grid">
-                <input type="number" id="kid" name="kid" placeholder="Kids"></div>
-            
-            <div class="rooms_grid"><button class="rooms_search"><i class="fas fa-search" style="padding-right: 20px;"></i>Search</button></div>
-            
+          <div class="rooms_grid">
+            <label for="start">Check in</label>
+            <input type="date" id="start" name="trip-start" required />
+          </div>
+
+          <div class="rooms_grid">
+            <label for="stop">Check out</label>
+            <input type="date" id="stop" name="trip-stop" required />
+          </div>
+
+          <div class="rooms_grid">
+            <input type="number" id="adult" name="adult" placeholder="Adults" />
+          </div>
+
+          <div class="rooms_grid">
+            <input type="number" id="kid" name="kid" placeholder="Kids" />
+            <label for="people">People:</label>
+
+            <select name="people" class="filter-people" style="width: 50px">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="4+">4+</option>
+            </select>
+          </div>
+
+          <div class="rooms_grid">
+            <button class="rooms_search">
+              <i class="fas fa-search" style="padding-right: 20px"></i>Search
+            </button>
+          </div>
         </div>
 
-        <div class="room">
-                <div class="pic"></div>
-                
-                <div class="info">
-                    <h2 class="name">Family Room 1</h2>
-                    <p>A spacious family room, which is catered for the able and disabled. It has a large en-suite (wet room) with easy ramp access. Quality bedding and comfortable beds are provided, as well as tea and coffee making facilities.</p>
-                    <ul>
-                        <li>Size: 221sqft</li>
-                        <li>Beds: 2 King(s)</li>
-                    </ul>
+        <div class="room family" id="family">
+          <div class="pic"></div>
 
-                    <div class="icons">
-                        <i class="fas fa-wifi"></i>
-                        <i class="fas fa-tv"></i>
-                        <i class="fas fa-shower"></i>
-                        <img src="./images/dryer.svg" alt="hairdryer">
-                        <img src="./images/towel.svg" alt="towel">
-                        <i class="fas fa-mug-hot"></i>
-                        <i class="fas fa-phone"></i>
-                        <i class="fas fa-wheelchair"></i>
-                        <i class="fab fa-usb"></i>
-                    </div>
-                </div>
+          <div class="info">
+            <h2 class="name">Family Room 1</h2>
+            <p>
+              A spacious family room, which is catered for the able and
+              disabled. It has a large en-suite (wet room) with easy ramp
+              access. Quality bedding and comfortable beds are provided, as well
+              as tea and coffee making facilities.
+            </p>
+            <ul>
+              <li>Size: 221sqft</li>
+              <li>Beds: 2 King(s)</li>
+            </ul>
 
-            <div class="price">
-                <p>From</p>
-                <h1 class="cost">£150</h1>
-                <button class="more_info">More Info</button>
+            <div class="icons">
+              <i class="fas fa-wifi"></i>
+              <i class="fas fa-tv"></i>
+              <i class="fas fa-shower"></i>
+              <img src="./images/dryer.svg" alt="hairdryer" />
+              <img src="./images/towel.svg" alt="towel" />
+              <i class="fas fa-mug-hot"></i>
+              <i class="fas fa-phone"></i>
+              <i class="fas fa-wheelchair"></i>
+              <i class="fab fa-usb"></i>
             </div>
+          </div>
+
+          <div class="price">
+            <p>From</p>
+            <h1 class="cost">£150</h1>
+            <button class="more_info">More Info</button>
+          </div>
         </div>
 
-<div class="room">
-    <div class="pic"></div>
-    
-    <div class="info">
-        <h2 class="name">Balcony Side Sea View Double Room 2</h2>
-        <p>
-            A Ground Floor double room with a door leads to a decking sitting area outside, a large shower en-suite and quality beds and beddings. Tea/coffee making facilities are provided.</p>
-        <ul>
-            <li>Size: 135sqft</li>
-            <li>Beds: 2 Double(s)</li>
-        </ul>
+        <div class="room double">
+          <div class="pic"></div>
 
-        <div class="icons">
-            <i class="fas fa-wifi"></i>
-            <i class="fas fa-tv"></i>
-            <i class="fas fa-shower"></i>
-            <img src="./images/dryer.svg" alt="hairdryer">
-            <img src="./images/towel.svg" alt="towel">
-            <i class="fas fa-mug-hot"></i>
-            <i class="fas fa-phone"></i>
-            <i class="fab fa-usb"></i>
+          <div class="info">
+            <h2 class="name">Balcony Side Sea View Double Room 2</h2>
+            <p>
+              A Ground Floor double room with a door leads to a decking sitting
+              area outside, a large shower en-suite and quality beds and
+              beddings. Tea/coffee making facilities are provided.
+            </p>
+            <ul>
+              <li>Size: 135sqft</li>
+              <li>Beds: 2 Double(s)</li>
+            </ul>
+
+            <div class="icons">
+              <i class="fas fa-wifi"></i>
+              <i class="fas fa-tv"></i>
+              <i class="fas fa-shower"></i>
+              <img src="./images/dryer.svg" alt="hairdryer" />
+              <img src="./images/towel.svg" alt="towel" />
+              <i class="fas fa-mug-hot"></i>
+              <i class="fas fa-phone"></i>
+              <i class="fab fa-usb"></i>
+            </div>
+          </div>
+
+          <div class="price">
+            <p>From</p>
+            <h1 class="cost">£130</h1>
+            <button class="more_info">More Info</button>
+          </div>
         </div>
-    </div>
 
-<div class="price">
-    <p>From</p>
-    <h1 class="cost">£130</h1>
-    <button class="more_info">More Info</button>
-</div>
-</div>
+        <div class="room double">
+          <div class="pic"></div>
 
-<div class="room">
-    <div class="pic"></div>
-    
-    <div class="info">
-        <h2 class="name">Small Double Room 3</h2>
-        <p>A cosy small double room with a neutral decor, a modern shower en-suite and a quality bed and bedding. Tea/coffee making facilities are provided.</p>
-        <ul>
-            <li>Size: 118sqft</li>
-            <li>Beds: 1 Double(s)</li>
-        </ul>
+          <div class="info">
+            <h2 class="name">Small Double Room 3</h2>
+            <p>
+              A cosy small double room with a neutral decor, a modern shower
+              en-suite and a quality bed and bedding. Tea/coffee making
+              facilities are provided.
+            </p>
+            <ul>
+              <li>Size: 118sqft</li>
+              <li>Beds: 1 Double(s)</li>
+            </ul>
 
-        <div class="icons">
-            <i class="fas fa-wifi"></i>
-            <i class="fas fa-tv"></i>
-            <i class="fas fa-shower"></i>
-            <img src="./images/dryer.svg" alt="hairdryer">
-            <img src="./images/towel.svg" alt="towel">
-            <i class="fas fa-mug-hot"></i>
-            <i class="fas fa-phone"></i>
-            <i class="fab fa-usb"></i>
+            <div class="icons">
+              <i class="fas fa-wifi"></i>
+              <i class="fas fa-tv"></i>
+              <i class="fas fa-shower"></i>
+              <img src="./images/dryer.svg" alt="hairdryer" />
+              <img src="./images/towel.svg" alt="towel" />
+              <i class="fas fa-mug-hot"></i>
+              <i class="fas fa-phone"></i>
+              <i class="fab fa-usb"></i>
+            </div>
+          </div>
+
+          <div class="price">
+            <p>From</p>
+            <h1 class="cost">£85</h1>
+            <button class="more_info">More Info</button>
+          </div>
         </div>
-    </div>
 
-<div class="price">
-    <p>From</p>
-    <h1 class="cost">£85</h1>
-    <button class="more_info">More Info</button>
-</div>
-</div>
+        <div class="room double">
+          <div class="pic"></div>
 
-<div class="room">
-    <div class="pic"></div>
-    
-    <div class="info">
-        <h2 class="name">Small Double Room 4</h2>
-        <p>A spacious bright room with, a shower en-suite and a quality bed and bedding. Tea/coffee making facilities are provided.</p>
-        <ul>
-            <li>Size: 91sqft</li>
-            <li>Beds: 1 Double(s)</li>
-        </ul>
+          <div class="info">
+            <h2 class="name">Small Double Room 4</h2>
+            <p>
+              A spacious bright room with, a shower en-suite and a quality bed
+              and bedding. Tea/coffee making facilities are provided.
+            </p>
+            <ul>
+              <li>Size: 91sqft</li>
+              <li>Beds: 1 Double(s)</li>
+            </ul>
 
-        <div class="icons">
-            <i class="fas fa-wifi"></i>
-            <i class="fas fa-tv"></i>
-            <i class="fas fa-shower"></i>
-            <img src="./images/dryer.svg" alt="hairdryer">
-            <img src="./images/towel.svg" alt="towel">
-            <i class="fas fa-mug-hot"></i>
-            <i class="fas fa-phone"></i>
-            <i class="fab fa-usb"></i>
+            <div class="icons">
+              <i class="fas fa-wifi"></i>
+              <i class="fas fa-tv"></i>
+              <i class="fas fa-shower"></i>
+              <img src="./images/dryer.svg" alt="hairdryer" />
+              <img src="./images/towel.svg" alt="towel" />
+              <i class="fas fa-mug-hot"></i>
+              <i class="fas fa-phone"></i>
+              <i class="fab fa-usb"></i>
+            </div>
+          </div>
+
+          <div class="price">
+            <p>From</p>
+            <h1 class="cost">£85</h1>
+            <button class="more_info">More Info</button>
+          </div>
         </div>
-    </div>
 
-<div class="price">
-    <p>From</p>
-    <h1 class="cost">£85</h1>
-    <button class="more_info">More Info</button>
-</div>
-</div>
+        <div class="room single">
+          <div class="pic"></div>
 
-<div class="room">
-    <div class="pic"></div>
-    
-    <div class="info">
-        <h2 class="name">Single Room 5</h2>
-        <p>A cosy room with a neutral decor, a modern bath and shower en-suite, and a quality bed and bedding. Tea/coffee making facilities are provided.</p>
-        <ul>
-            <li>Size: 54sqft</li>
-            <li>Beds: 1 Single(s)</li>
-        </ul>
+          <div class="info">
+            <h2 class="name">Single Room 5</h2>
+            <p>
+              A cosy room with a neutral decor, a modern bath and shower
+              en-suite, and a quality bed and bedding. Tea/coffee making
+              facilities are provided.
+            </p>
+            <ul>
+              <li>Size: 54sqft</li>
+              <li>Beds: 1 Single(s)</li>
+            </ul>
 
-        <div class="icons">
-            <i class="fas fa-wifi"></i>
-            <i class="fas fa-tv"></i>
-            <i class="fas fa-bath"></i>
-            <img src="./images/dryer.svg" alt="hairdryer">
-            <img src="./images/towel.svg" alt="towel">
-            <i class="fas fa-mug-hot"></i>
-            <i class="fas fa-phone"></i>
-            <i class="fab fa-usb"></i>
+            <div class="icons">
+              <i class="fas fa-wifi"></i>
+              <i class="fas fa-tv"></i>
+              <i class="fas fa-bath"></i>
+              <img src="./images/dryer.svg" alt="hairdryer" />
+              <img src="./images/towel.svg" alt="towel" />
+              <i class="fas fa-mug-hot"></i>
+              <i class="fas fa-phone"></i>
+              <i class="fab fa-usb"></i>
+            </div>
+          </div>
+
+          <div class="price">
+            <p>From</p>
+            <h1 class="cost">£55</h1>
+            <button class="more_info">More Info</button>
+          </div>
         </div>
-    </div>
 
-<div class="price">
-    <p>From</p>
-    <h1 class="cost">£55</h1>
-    <button class="more_info">More Info</button>
-</div>
-</div>
+        <div class="room single double">
+          <div class="pic"></div>
 
+          <div class="info">
+            <h2 class="name">Single/Small Double Room 6</h2>
+            <p>
+              A small double room with a neutral decor, a modern small shower
+              en-suite and quality bed and bedding. Tea/coffee making facilities
+              are provided.
+            </p>
+            <ul>
+              <li>Size: 97sqft</li>
+              <li>Beds: 1 Double(s)</li>
+            </ul>
 
-<div class="room">
-    <div class="pic"></div>
-    
-    <div class="info">
-        <h2 class="name">Single/Small Double Room 6</h2>
-        <p>A small double room with a neutral decor, a modern small shower en-suite and quality bed and bedding. Tea/coffee making facilities are provided.</p>
-        <ul>
-            <li>Size: 97sqft</li>
-            <li>Beds: 1 Double(s)</li>
-        </ul>
+            <div class="icons">
+              <i class="fas fa-wifi"></i>
+              <i class="fas fa-tv"></i>
+              <i class="fas fa-shower"></i>
+              <img src="./images/dryer.svg" alt="hairdryer" />
+              <img src="./images/towel.svg" alt="towel" />
+              <i class="fas fa-mug-hot"></i>
+              <i class="fas fa-phone"></i>
+              <i class="fab fa-usb"></i>
+            </div>
+          </div>
 
-        <div class="icons">
-            <i class="fas fa-wifi"></i>
-            <i class="fas fa-tv"></i>
-            <i class="fas fa-shower"></i>
-            <img src="./images/dryer.svg" alt="hairdryer">
-            <img src="./images/towel.svg" alt="towel">
-            <i class="fas fa-mug-hot"></i>
-            <i class="fas fa-phone"></i>
-            <i class="fab fa-usb"></i>
+          <div class="price">
+            <p>From</p>
+            <h1 class="cost">£80</h1>
+            <button class="more_info">More Info</button>
+          </div>
         </div>
-    </div>
 
-<div class="price">
-    <p>From</p>
-    <h1 class="cost">£80</h1>
-    <button class="more_info">More Info</button>
-</div>
-</div>
+        <div class="room family">
+          <div class="pic"></div>
 
+          <div class="info">
+            <h2 class="name">Family Room 7</h2>
+            <p>
+              A spacious family room, which is catered for the able and
+              disabled. It has a large en-suite (wet room) with easy ramp
+              access. Quality bedding and comfortable beds are provided, as well
+              as tea and coffee making facilities.
+            </p>
+            <ul>
+              <li>Size: 200sqft</li>
+              <li>Beds: 1 King(s), 1 Twin(s)</li>
+            </ul>
 
-<div class="room">
-    <div class="pic"></div>
-    
-    <div class="info">
-        <h2 class="name">Family Room 7</h2>
-        <p>A spacious family room, which is catered for the able and disabled. It has a large en-suite (wet room) with easy ramp access. Quality bedding and comfortable beds are provided, as well as tea and coffee making facilities.</p>
-        <ul>
-            <li>Size: 200sqft</li>
-            <li>Beds: 1 King(s), 1 Twin(s)</li>
-        </ul>
+            <div class="icons">
+              <i class="fas fa-wifi"></i>
+              <i class="fas fa-tv"></i>
+              <i class="fas fa-shower"></i>
+              <img src="./images/dryer.svg" alt="hairdryer" />
+              <img src="./images/towel.svg" alt="towel" />
+              <i class="fas fa-mug-hot"></i>
+              <i class="fas fa-phone"></i>
+              <i class="fab fa-usb"></i>
+            </div>
+          </div>
 
-        <div class="icons">
-            <i class="fas fa-wifi"></i>
-            <i class="fas fa-tv"></i>
-            <i class="fas fa-shower"></i>
-            <img src="./images/dryer.svg" alt="hairdryer">
-            <img src="./images/towel.svg" alt="towel">
-            <i class="fas fa-mug-hot"></i>
-            <i class="fas fa-phone"></i>
-            <i class="fab fa-usb"></i>
+          <div class="price">
+            <p>From</p>
+            <h1 class="cost">£150</h1>
+            <button class="more_info">More Info</button>
+          </div>
         </div>
-    </div>
 
-<div class="price">
-    <p>From</p>
-    <h1 class="cost">£150</h1>
-    <button class="more_info">More Info</button>
-</div>
-</div>
+        <div class="room double">
+          <div class="pic"></div>
 
+          <div class="info">
+            <h2 class="name">Twin Side Sea View Room 101</h2>
+            <p>
+              A cosy room with a slight side view of the sea, neutral decor, a
+              modern shower en-suite and quality beds and bedding. Tea/coffee
+              making facilities are provided.
+            </p>
+            <ul>
+              <li>Size: 129sqft</li>
+              <li>Beds: 2 Single(s)</li>
+            </ul>
 
-<div class="room">
-    <div class="pic"></div>
-    
-    <div class="info">
-        <h2 class="name">Twin Side Sea View Room 101</h2>
-        <p>A cosy room with a slight side view of the sea, neutral decor, a modern shower en-suite and quality beds and bedding. Tea/coffee making facilities are provided.</p>
-        <ul>
-            <li>Size: 129sqft</li>
-            <li>Beds: 2 Single(s)</li>
-        </ul>
+            <div class="icons">
+              <i class="fas fa-wifi"></i>
+              <i class="fas fa-tv"></i>
+              <i class="fas fa-shower"></i>
+              <img src="./images/dryer.svg" alt="hairdryer" />
+              <img src="./images/towel.svg" alt="towel" />
+              <i class="fas fa-mug-hot"></i>
+              <i class="fas fa-phone"></i>
+              <i class="fab fa-usb"></i>
+            </div>
+          </div>
 
-        <div class="icons">
-            <i class="fas fa-wifi"></i>
-            <i class="fas fa-tv"></i>
-            <i class="fas fa-shower"></i>
-            <img src="./images/dryer.svg" alt="hairdryer">
-            <img src="./images/towel.svg" alt="towel">
-            <i class="fas fa-mug-hot"></i>
-            <i class="fas fa-phone"></i>
-            <i class="fab fa-usb"></i>
+          <div class="price">
+            <p>From</p>
+            <h1 class="cost">£99</h1>
+            <button class="more_info">More Info</button>
+          </div>
         </div>
-    </div>
 
-<div class="price">
-    <p>From</p>
-    <h1 class="cost">£99</h1>
-    <button class="more_info">More Info</button>
-</div>
-</div>
+        <div class="room double">
+          <div class="pic"></div>
 
-<div class="room">
-<div class="pic"></div>
+          <div class="info">
+            <h2 class="name">Small Double Room 102</h2>
+            <p>
+              A bright small double room with a neutral decor, a slight view of
+              the sea and a modern small shower en-suite. It has quality small
+              double bed and bedding. Tea/coffee making facilities are provided.
+              If you require a bigger room, you can contact the hotel directly
+              prior to booking for up grade.
+            </p>
+            <ul>
+              <li>Size: 91sqft</li>
+              <li>Beds: 1 Double(s)</li>
+            </ul>
 
-<div class="info">
-    <h2 class="name">Small Double Room 102</h2>
-    <p>
-        A bright small double room with a neutral decor, a slight view of the sea and a modern small shower en-suite. It has quality small double bed and bedding. Tea/coffee making facilities are provided. If you require a bigger room, you can contact the hotel directly prior to booking for up grade.</p>
-    <ul>
-        <li>Size: 91sqft</li>
-        <li>Beds: 1 Double(s)</li>
-    </ul>
+            <div class="icons">
+              <i class="fas fa-wifi"></i>
+              <i class="fas fa-tv"></i>
+              <i class="fas fa-shower"></i>
+              <img src="./images/dryer.svg" alt="hairdryer" />
+              <img src="./images/towel.svg" alt="towel" />
+              <i class="fas fa-mug-hot"></i>
+              <i class="fas fa-phone"></i>
+              <i class="fab fa-usb"></i>
+            </div>
+          </div>
 
-    <div class="icons">
-        <i class="fas fa-wifi"></i>
-        <i class="fas fa-tv"></i>
-        <i class="fas fa-shower"></i>
-        <img src="./images/dryer.svg" alt="hairdryer">
-        <img src="./images/towel.svg" alt="towel">
-        <i class="fas fa-mug-hot"></i>
-        <i class="fas fa-phone"></i>
-        <i class="fab fa-usb"></i>
-    </div>
-</div>
-
-<div class="price">
-<p>From</p>
-<h1 class="cost">£85</h1>
-<button class="more_info">More Info</button>
-</div>
-</div>
-
-<div class="room">
-<div class="pic"></div>
-
-<div class="info">
-    <h2 class="name">Balcony Double Room 103</h2>
-    <p>A Balcony Room with side view of the sea. It has a neutral decoration, a modern shower en-suite and quality bed and bedding. Tea/coffee making facilities are provided.</p>
-    <ul>
-        <li>Size: 129sqft</li>
-        <li>Beds: 1 King(s)</li>
-    </ul>
-
-    <div class="icons">
-        <i class="fas fa-wifi"></i>
-        <i class="fas fa-tv"></i>
-        <i class="fas fa-shower"></i>
-        <img src="./images/dryer.svg" alt="hairdryer">
-        <img src="./images/towel.svg" alt="towel">
-        <i class="fas fa-mug-hot"></i>
-        <i class="fas fa-phone"></i>
-        <i class="fab fa-usb"></i>
-    </div>
-</div>
-
-<div class="price">
-<p>From</p>
-<h1 class="cost">£130</h1>
-<button class="more_info">More Info</button>
-</div>
-</div>
-
-<div class="room">
-<div class="pic"></div>
-
-<div class="info">
-    <h2 class="name">Small Double Room 104</h2>
-    <p>A cosy room with a neutral decor, a modern shower en-suite and quality bed and bedding. Tea/coffee making facilities are provided.</p>
-    <ul>
-        <li>Size: 113sqft</li>
-        <li>Beds: 1 Double(s)</li>
-    </ul>
-
-    <div class="icons">
-        <i class="fas fa-wifi"></i>
-        <i class="fas fa-tv"></i>
-        <i class="fas fa-shower"></i>
-        <img src="./images/dryer.svg" alt="hairdryer">
-        <img src="./images/towel.svg" alt="towel">
-        <i class="fas fa-mug-hot"></i>
-        <i class="fas fa-phone"></i>
-        <i class="fab fa-usb"></i>
-    </div>
-</div>
-
-<div class="price">
-<p>From</p>
-<h1 class="cost">£85</h1>
-<button class="more_info">More Info</button>
-</div>
-</div>
-
-
-<div class="room">
-<div class="pic"></div>
-
-<div class="info">
-    <h2 class="name">Small Double Room 105</h2>
-    <p>A bright double room with a neutral decor, a modern bath and shower en-suite and quality bed and bedding. Tea/coffee making facilities are provided.</p>
-    <ul>
-        <li>Size: 102sqft</li>
-        <li>Beds: 1 Double(s)</li>
-    </ul>
-
-    <div class="icons">
-        <i class="fas fa-wifi"></i>
-        <i class="fas fa-tv"></i>
-        <i class="fas fa-bath"></i>
-        <img src="./images/dryer.svg" alt="hairdryer">
-        <img src="./images/towel.svg" alt="towel">
-        <i class="fas fa-mug-hot"></i>
-        <i class="fas fa-phone"></i>
-        <i class="fab fa-usb"></i>
-    </div>
-</div>
-
-<div class="price">
-<p>From</p>
-<h1 class="cost">£85</h1>
-<button class="more_info">More Info</button>
-</div>
-</div>
-
-
-<div class="room">
-    <div class="pic"></div>
-    
-    <div class="info">
-        <h2 class="name">Family Room 106</h2>
-        <p>A large spacious room with a neutral decor, a modern shower en-suite and quality beds and bedding. Tea/coffee making facilities are provided.</p>
-        <ul>
-            <li>Size: 188sqft</li>
-            <li>Beds: 2 Double(s)</li>
-        </ul>
-
-        <div class="icons">
-            <i class="fas fa-wifi"></i>
-            <i class="fas fa-tv"></i>
-            <i class="fas fa-shower"></i>
-            <img src="./images/dryer.svg" alt="hairdryer">
-            <img src="./images/towel.svg" alt="towel">
-            <i class="fas fa-mug-hot"></i>
-            <i class="fas fa-phone"></i>
-            <i class="fab fa-usb"></i>
+          <div class="price">
+            <p>From</p>
+            <h1 class="cost">£85</h1>
+            <button class="more_info">More Info</button>
+          </div>
         </div>
-    </div>
 
-<div class="price">
-    <p>From</p>
-    <h1 class="cost">£150</h1>
-    <button class="more_info">More Info</button>
-</div>
-</div>
+        <div class="room double">
+          <div class="pic"></div>
 
-<div class="room">
-    <div class="pic"></div>
-    
-    <div class="info">
-        <h2 class="name">Family Side Sea View Room 201</h2>
-        <p>A spacious family room, which is catered for the able and disabled. It has a large en-suite (wet room) with easy ramp access. Quality bedding and comfortable beds are provided, as well as tea and coffee making facilities.</p>
-        <ul>
-            <li>Size: 151sqft</li>
-            <li>Beds: 1 King(s), 1 Twin(s)</li>
-        </ul>
+          <div class="info">
+            <h2 class="name">Balcony Double Room 103</h2>
+            <p>
+              A Balcony Room with side view of the sea. It has a neutral
+              decoration, a modern shower en-suite and quality bed and bedding.
+              Tea/coffee making facilities are provided.
+            </p>
+            <ul>
+              <li>Size: 129sqft</li>
+              <li>Beds: 1 King(s)</li>
+            </ul>
 
-        <div class="icons">
-            <i class="fas fa-wifi"></i>
-            <i class="fas fa-tv"></i>
-            <i class="fas fa-bath"></i>
-            <img src="./images/dryer.svg" alt="hairdryer">
-            <img src="./images/towel.svg" alt="towel">
-            <i class="fas fa-mug-hot"></i>
-            <i class="fas fa-phone"></i>
-            <i class="fab fa-usb"></i>
+            <div class="icons">
+              <i class="fas fa-wifi"></i>
+              <i class="fas fa-tv"></i>
+              <i class="fas fa-shower"></i>
+              <img src="./images/dryer.svg" alt="hairdryer" />
+              <img src="./images/towel.svg" alt="towel" />
+              <i class="fas fa-mug-hot"></i>
+              <i class="fas fa-phone"></i>
+              <i class="fab fa-usb"></i>
+            </div>
+          </div>
+
+          <div class="price">
+            <p>From</p>
+            <h1 class="cost">£130</h1>
+            <button class="more_info">More Info</button>
+          </div>
         </div>
-    </div>
 
-<div class="price">
-    <p>From</p>
-    <h1 class="cost">£150</h1>
-    <button class="more_info">More Info</button>
-</div>
-</div>
+        <div class="room double">
+          <div class="pic"></div>
 
-<div class="room">
-    <div class="pic"></div>
-    
-    <div class="info">
-        <h2 class="name">Front Sea View Double Balcony Room 202</h2>
-        <p>
-            This bright room has a spacious it's own privet balcony with a beautiful view of the sea. The balcony is furnished with luxury coffee table and chair for two. A modern shower en-suite, a quality beds and bedding and is provided with tea/coffee making facilities. It's one of our best Sea View room!!</p>
-        <ul>
-            <li>Size: 118sqft</li>
-            <li>Beds: 1 Double(s)</li>
-        </ul>
+          <div class="info">
+            <h2 class="name">Small Double Room 104</h2>
+            <p>
+              A cosy room with a neutral decor, a modern shower en-suite and
+              quality bed and bedding. Tea/coffee making facilities are
+              provided.
+            </p>
+            <ul>
+              <li>Size: 113sqft</li>
+              <li>Beds: 1 Double(s)</li>
+            </ul>
 
-        <div class="icons">
-            <i class="fas fa-wifi"></i>
-            <i class="fas fa-tv"></i>
-            <i class="fas fa-shower"></i>
-            <img src="./images/dryer.svg" alt="hairdryer">
-            <img src="./images/towel.svg" alt="towel">
-            <i class="fas fa-mug-hot"></i>
-            <i class="fas fa-phone"></i>
-            <i class="fab fa-usb"></i>
+            <div class="icons">
+              <i class="fas fa-wifi"></i>
+              <i class="fas fa-tv"></i>
+              <i class="fas fa-shower"></i>
+              <img src="./images/dryer.svg" alt="hairdryer" />
+              <img src="./images/towel.svg" alt="towel" />
+              <i class="fas fa-mug-hot"></i>
+              <i class="fas fa-phone"></i>
+              <i class="fab fa-usb"></i>
+            </div>
+          </div>
+
+          <div class="price">
+            <p>From</p>
+            <h1 class="cost">£85</h1>
+            <button class="more_info">More Info</button>
+          </div>
         </div>
-    </div>
 
-<div class="price">
-    <p>From</p>
-    <h1 class="cost">£145</h1>
-    <button class="more_info">More Info</button>
-</div>
-</div>
+        <div class="room double">
+          <div class="pic"></div>
 
-<div class="room">
-    <div class="pic"></div>
-    
-    <div class="info">
-        <h2 class="name">Balcony Sea View Double Room 203</h2>
-        <p>This spacious room has it's own privet balcony with a beautiful view of the sea. The balcony is furnished with luxury coffee table and chair for two. A modern shower en-suite, quality beds and bedding and is provided with tea/coffee making facilities. It's one of our best Sea View room!!</p>
-        <ul>
-            <li>Size: 135sqft</li>
-            <li>Beds: 1 Double(s)</li>
-        </ul>
+          <div class="info">
+            <h2 class="name">Small Double Room 105</h2>
+            <p>
+              A bright double room with a neutral decor, a modern bath and
+              shower en-suite and quality bed and bedding. Tea/coffee making
+              facilities are provided.
+            </p>
+            <ul>
+              <li>Size: 102sqft</li>
+              <li>Beds: 1 Double(s)</li>
+            </ul>
 
-        <div class="icons">
-            <i class="fas fa-wifi"></i>
-            <i class="fas fa-tv"></i>
-            <i class="fas fa-shower"></i>
-            <img src="./images/dryer.svg" alt="hairdryer">
-            <img src="./images/towel.svg" alt="towel">
-            <i class="fas fa-mug-hot"></i>
-            <i class="fas fa-phone"></i>
-            <i class="fab fa-usb"></i>
+            <div class="icons">
+              <i class="fas fa-wifi"></i>
+              <i class="fas fa-tv"></i>
+              <i class="fas fa-bath"></i>
+              <img src="./images/dryer.svg" alt="hairdryer" />
+              <img src="./images/towel.svg" alt="towel" />
+              <i class="fas fa-mug-hot"></i>
+              <i class="fas fa-phone"></i>
+              <i class="fab fa-usb"></i>
+            </div>
+          </div>
+
+          <div class="price">
+            <p>From</p>
+            <h1 class="cost">£85</h1>
+            <button class="more_info">More Info</button>
+          </div>
         </div>
-    </div>
 
-<div class="price">
-    <p>From</p>
-    <h1 class="cost">£145</h1>
-    <button class="more_info">More Info</button>
-</div>
-</div>
+        <div class="room family">
+          <div class="pic"></div>
 
-<div class="room">
-    <div class="pic"></div>
-    
-    <div class="info">
-        <h2 class="name">Balcony Sea View Double Room 204</h2>
-        <p>
-            This spacious room has it's own privet balcony with a beautiful view of the sea. The balcony is furnished with luxury coffee table and chair for two person. A modern shower en-suite, a quality bed and bedding and is provided with tea/coffee making facilities. It's one of our best Sea View room!!</p>
-        <ul>
-            <li>Size: 118sqft</li>
-            <li>Beds: 1 King(s)</li>
-        </ul>
+          <div class="info">
+            <h2 class="name">Family Room 106</h2>
+            <p>
+              A large spacious room with a neutral decor, a modern shower
+              en-suite and quality beds and bedding. Tea/coffee making
+              facilities are provided.
+            </p>
+            <ul>
+              <li>Size: 188sqft</li>
+              <li>Beds: 2 Double(s)</li>
+            </ul>
 
-        <div class="icons">
-            <i class="fas fa-wifi"></i>
-            <i class="fas fa-tv"></i>
-            <i class="fas fa-shower"></i>
-            <img src="./images/dryer.svg" alt="hairdryer">
-            <img src="./images/towel.svg" alt="towel">
-            <i class="fas fa-mug-hot"></i>
-            <i class="fas fa-phone"></i>
-            <i class="fab fa-usb"></i>
+            <div class="icons">
+              <i class="fas fa-wifi"></i>
+              <i class="fas fa-tv"></i>
+              <i class="fas fa-shower"></i>
+              <img src="./images/dryer.svg" alt="hairdryer" />
+              <img src="./images/towel.svg" alt="towel" />
+              <i class="fas fa-mug-hot"></i>
+              <i class="fas fa-phone"></i>
+              <i class="fab fa-usb"></i>
+            </div>
+          </div>
+
+          <div class="price">
+            <p>From</p>
+            <h1 class="cost">£150</h1>
+            <button class="more_info">More Info</button>
+          </div>
         </div>
-    </div>
 
-<div class="price">
-    <p>From</p>
-    <h1 class="cost">£145</h1>
-    <button class="more_info">More Info</button>
-</div>
-</div>
+        <div class="room family">
+          <div class="pic"></div>
 
-<div class="room">
-    <div class="pic"></div>
-    
-    <div class="info">
-        <h2 class="name">Balcony Sea View Double Room 205</h2>
-        <p>
-            This spacious room has it's own privet balcony with a beautiful view of the sea. The balcony is furnished with luxury coffee table and chairs for two person. A modern bath and shower en-suite, a quality bed and bedding and is provided with tea/coffee making facilities. It's one of our best Sea View room!!</p>
-        <ul>
-            <li>Size: 118sqft</li>
-            <li>Beds: 1 Double(s)</li>
-        </ul>
+          <div class="info">
+            <h2 class="name">Family Side Sea View Room 201</h2>
+            <p>
+              A spacious family room, which is catered for the able and
+              disabled. It has a large en-suite (wet room) with easy ramp
+              access. Quality bedding and comfortable beds are provided, as well
+              as tea and coffee making facilities.
+            </p>
+            <ul>
+              <li>Size: 151sqft</li>
+              <li>Beds: 1 King(s), 1 Twin(s)</li>
+            </ul>
 
-        <div class="icons">
-            <i class="fas fa-wifi"></i>
-            <i class="fas fa-tv"></i>
-            <i class="fas fa-bath"></i>
-            <img src="./images/dryer.svg" alt="hairdryer">
-            <img src="./images/towel.svg" alt="towel">
-            <i class="fas fa-mug-hot"></i>
-            <i class="fas fa-phone"></i>
-            <i class="fab fa-usb"></i>
+            <div class="icons">
+              <i class="fas fa-wifi"></i>
+              <i class="fas fa-tv"></i>
+              <i class="fas fa-bath"></i>
+              <img src="./images/dryer.svg" alt="hairdryer" />
+              <img src="./images/towel.svg" alt="towel" />
+              <i class="fas fa-mug-hot"></i>
+              <i class="fas fa-phone"></i>
+              <i class="fab fa-usb"></i>
+            </div>
+          </div>
+
+          <div class="price">
+            <p>From</p>
+            <h1 class="cost">£150</h1>
+            <button class="more_info">More Info</button>
+          </div>
         </div>
-    </div>
 
-<div class="price">
-    <p>From</p>
-    <h1 class="cost">£145</h1>
-    <button class="more_info">More Info</button>
-</div>
-</div>
+        <div class="room double">
+          <div class="pic"></div>
 
-<div class="room">
-    <div class="pic"></div>
-    
-    <div class="info">
-        <h2 class="name">Triple Side Sea View Room 206</h2>
-        <p>This spacious room has a slight view of the sea, a modern bath and shower en-suite, quality beds and bedding and is provided with tea/coffee making facilities.</p>
-        <ul>
-            <li>Size: 199sqft</li>
-            <li>Beds: 1 King(s), 1 Single(s)</li>
-        </ul>
+          <div class="info">
+            <h2 class="name">Front Sea View Double Balcony Room 202</h2>
+            <p>
+              This bright room has a spacious it's own privet balcony with a
+              beautiful view of the sea. The balcony is furnished with luxury
+              coffee table and chair for two. A modern shower en-suite, a
+              quality beds and bedding and is provided with tea/coffee making
+              facilities. It's one of our best Sea View room!!
+            </p>
+            <ul>
+              <li>Size: 118sqft</li>
+              <li>Beds: 1 Double(s)</li>
+            </ul>
 
-        <div class="icons">
-            <i class="fas fa-wifi"></i>
-            <i class="fas fa-tv"></i>
-            <i class="fas fa-bath"></i>
-            <img src="./images/dryer.svg" alt="hairdryer">
-            <img src="./images/towel.svg" alt="towel">
-            <i class="fas fa-mug-hot"></i>
-            <i class="fas fa-phone"></i>
-            <i class="fab fa-usb"></i>
+            <div class="icons">
+              <i class="fas fa-wifi"></i>
+              <i class="fas fa-tv"></i>
+              <i class="fas fa-shower"></i>
+              <img src="./images/dryer.svg" alt="hairdryer" />
+              <img src="./images/towel.svg" alt="towel" />
+              <i class="fas fa-mug-hot"></i>
+              <i class="fas fa-phone"></i>
+              <i class="fab fa-usb"></i>
+            </div>
+          </div>
+
+          <div class="price">
+            <p>From</p>
+            <h1 class="cost">£145</h1>
+            <button class="more_info">More Info</button>
+          </div>
         </div>
-    </div>
 
-<div class="price">
-    <p>From</p>
-    <h1 class="cost">£150</h1>
-    <button class="more_info">More Info</button>
-</div>
-</div>
+        <div class="room double">
+          <div class="pic"></div>
 
-<div class="room">
-    <div class="pic"></div>
-    
-    <div class="info">
-        <h2 class="name">Single Room 301</h2>
-        <p>This cosy room has a modern shower en-suite, a quality bed and bedding and is provided with hair dryer, tea/coffee making facilities.</p>
-        <ul>
-            <li>Size: 70sqft</li>
-            <li>Beds: 1 Single(s)</li>
-        </ul>
+          <div class="info">
+            <h2 class="name">Balcony Sea View Double Room 203</h2>
+            <p>
+              This spacious room has it's own privet balcony with a beautiful
+              view of the sea. The balcony is furnished with luxury coffee table
+              and chair for two. A modern shower en-suite, quality beds and
+              bedding and is provided with tea/coffee making facilities. It's
+              one of our best Sea View room!!
+            </p>
+            <ul>
+              <li>Size: 135sqft</li>
+              <li>Beds: 1 Double(s)</li>
+            </ul>
 
-        <div class="icons">
-            <i class="fas fa-wifi"></i>
-            <i class="fas fa-tv"></i>
-            <i class="fas fa-shower"></i>
-            <img src="./images/dryer.svg" alt="hairdryer">
-            <img src="./images/towel.svg" alt="towel">
-            <i class="fas fa-mug-hot"></i>
-            <i class="fas fa-phone"></i>
-            <i class="fab fa-usb"></i>
+            <div class="icons">
+              <i class="fas fa-wifi"></i>
+              <i class="fas fa-tv"></i>
+              <i class="fas fa-shower"></i>
+              <img src="./images/dryer.svg" alt="hairdryer" />
+              <img src="./images/towel.svg" alt="towel" />
+              <i class="fas fa-mug-hot"></i>
+              <i class="fas fa-phone"></i>
+              <i class="fab fa-usb"></i>
+            </div>
+          </div>
+
+          <div class="price">
+            <p>From</p>
+            <h1 class="cost">£145</h1>
+            <button class="more_info">More Info</button>
+          </div>
         </div>
-    </div>
 
-<div class="price">
-    <p>From</p>
-    <h1 class="cost">£65</h1>
-    <button class="more_info">More Info</button>
-</div>
-</div>
+        <div class="room double">
+          <div class="pic"></div>
 
-<div class="room">
-    <div class="pic"></div>
-    
-    <div class="info">
-        <h2 class="name">Double Side Sea View Room 302</h2>
-        <p>This bright room has a beautiful view of the sea, a large modern bath and shower en-suite, a quality bed and bedding and is provided with tea/coffee making facilities.</p>
-        <ul>
-            <li>Size: 91sqft</li>
-            <li>Beds: 1 King(s)</li>
-        </ul>
+          <div class="info">
+            <h2 class="name">Balcony Sea View Double Room 204</h2>
+            <p>
+              This spacious room has it's own privet balcony with a beautiful
+              view of the sea. The balcony is furnished with luxury coffee table
+              and chair for two person. A modern shower en-suite, a quality bed
+              and bedding and is provided with tea/coffee making facilities.
+              It's one of our best Sea View room!!
+            </p>
+            <ul>
+              <li>Size: 118sqft</li>
+              <li>Beds: 1 King(s)</li>
+            </ul>
 
-        <div class="icons">
-            <i class="fas fa-wifi"></i>
-            <i class="fas fa-tv"></i>
-            <i class="fas fa-bath"></i>
-            <img src="./images/dryer.svg" alt="hairdryer">
-            <img src="./images/towel.svg" alt="towel">
-            <i class="fas fa-mug-hot"></i>
-            <i class="fas fa-phone"></i>
-            <i class="fab fa-usb"></i>
+            <div class="icons">
+              <i class="fas fa-wifi"></i>
+              <i class="fas fa-tv"></i>
+              <i class="fas fa-shower"></i>
+              <img src="./images/dryer.svg" alt="hairdryer" />
+              <img src="./images/towel.svg" alt="towel" />
+              <i class="fas fa-mug-hot"></i>
+              <i class="fas fa-phone"></i>
+              <i class="fab fa-usb"></i>
+            </div>
+          </div>
+
+          <div class="price">
+            <p>From</p>
+            <h1 class="cost">£145</h1>
+            <button class="more_info">More Info</button>
+          </div>
         </div>
-    </div>
 
-<div class="price">
-    <p>From</p>
-    <h1 class="cost">£99</h1>
-    <button class="more_info">More Info</button>
-</div>
-</div>
+        <div class="room double">
+          <div class="pic"></div>
 
-<div class="room">
-    <div class="pic"></div>
-    
-    <div class="info">
-        <h2 class="name">Double Side Sea View Room 303</h2>
-        <p>This double room has a beautiful view of the sea, a shower en-suite, a quality bed and bedding and is provided with tea/coffee making facilities.</p>
-        <ul>
-            <li>Size: 108sqft</li>
-            <li>Beds: 1 King(s)</li>
-        </ul>
+          <div class="info">
+            <h2 class="name">Balcony Sea View Double Room 205</h2>
+            <p>
+              This spacious room has it's own privet balcony with a beautiful
+              view of the sea. The balcony is furnished with luxury coffee table
+              and chairs for two person. A modern bath and shower en-suite, a
+              quality bed and bedding and is provided with tea/coffee making
+              facilities. It's one of our best Sea View room!!
+            </p>
+            <ul>
+              <li>Size: 118sqft</li>
+              <li>Beds: 1 Double(s)</li>
+            </ul>
 
-        <div class="icons">
-            <i class="fas fa-wifi"></i>
-            <i class="fas fa-tv"></i>
-            <i class="fas fa-shower"></i>
-            <img src="./images/dryer.svg" alt="hairdryer">
-            <img src="./images/towel.svg" alt="towel">
-            <i class="fas fa-mug-hot"></i>
-            <i class="fas fa-phone"></i>
-            <i class="fab fa-usb"></i>
+            <div class="icons">
+              <i class="fas fa-wifi"></i>
+              <i class="fas fa-tv"></i>
+              <i class="fas fa-bath"></i>
+              <img src="./images/dryer.svg" alt="hairdryer" />
+              <img src="./images/towel.svg" alt="towel" />
+              <i class="fas fa-mug-hot"></i>
+              <i class="fas fa-phone"></i>
+              <i class="fab fa-usb"></i>
+            </div>
+          </div>
+
+          <div class="price">
+            <p>From</p>
+            <h1 class="cost">£145</h1>
+            <button class="more_info">More Info</button>
+          </div>
         </div>
-    </div>
 
-<div class="price">
-    <p>From</p>
-    <h1 class="cost">£99</h1>
-    <button class="more_info">More Info</button>
-</div>
-</div>
+        <div class="room triple">
+          <div class="pic"></div>
 
-<div class="room">
-    <div class="pic"></div>
-    
-    <div class="info">
-        <h2 class="name">Twin Side Sea View Room 401</h2>
-        <p>This room has a great view of the sea and cliff. It comes with quality bed and bedding, modern bath and shower en-suite and tea/coffee making facilities.</p>
-        <ul>
-            <li>Size: 113sqft</li>
-            <li>Beds: 2 Single(s)</li>
-        </ul>
+          <div class="info">
+            <h2 class="name">Triple Side Sea View Room 206</h2>
+            <p>
+              This spacious room has a slight view of the sea, a modern bath and
+              shower en-suite, quality beds and bedding and is provided with
+              tea/coffee making facilities.
+            </p>
+            <ul>
+              <li>Size: 199sqft</li>
+              <li>Beds: 1 King(s), 1 Single(s)</li>
+            </ul>
 
-        <div class="icons">
-            <i class="fas fa-wifi"></i>
-            <i class="fas fa-tv"></i>
-            <i class="fas fa-bath"></i>
-            <img src="./images/dryer.svg" alt="hairdryer">
-            <img src="./images/towel.svg" alt="towel">
-            <i class="fas fa-mug-hot"></i>
-            <i class="fas fa-phone"></i>
-            <i class="fab fa-usb"></i>
+            <div class="icons">
+              <i class="fas fa-wifi"></i>
+              <i class="fas fa-tv"></i>
+              <i class="fas fa-bath"></i>
+              <img src="./images/dryer.svg" alt="hairdryer" />
+              <img src="./images/towel.svg" alt="towel" />
+              <i class="fas fa-mug-hot"></i>
+              <i class="fas fa-phone"></i>
+              <i class="fab fa-usb"></i>
+            </div>
+          </div>
+
+          <div class="price">
+            <p>From</p>
+            <h1 class="cost">£150</h1>
+            <button class="more_info">More Info</button>
+          </div>
         </div>
-    </div>
 
-<div class="price">
-    <p>From</p>
-    <h1 class="cost">£99</h1>
-    <button class="more_info">More Info</button>
-</div>
-</div>
+        <div class="room single">
+          <div class="pic"></div>
 
-<div class="room">
-    <div class="pic"></div>
-    
-    <div class="info">
-        <h2 class="name">Double Side Sea View Room 402</h2>
-        <p>
-            This room has a side view of the sea, with a modern shower en-suite and a tap basin in the room, as well as a comfortable bed and bedding. It is also provided with tea and coffee making facilities.</p>
-        <ul>
-            <li>Size: 113sqft</li>
-            <li>Beds: 1 Double(s)</li>
-        </ul>
+          <div class="info">
+            <h2 class="name">Single Room 301</h2>
+            <p>
+              This cosy room has a modern shower en-suite, a quality bed and
+              bedding and is provided with hair dryer, tea/coffee making
+              facilities.
+            </p>
+            <ul>
+              <li>Size: 70sqft</li>
+              <li>Beds: 1 Single(s)</li>
+            </ul>
 
-        <div class="icons">
-            <i class="fas fa-wifi"></i>
-            <i class="fas fa-tv"></i>
-            <i class="fas fa-shower"></i>
-            <img src="./images/dryer.svg" alt="hairdryer">
-            <img src="./images/towel.svg" alt="towel">
-            <i class="fas fa-mug-hot"></i>
-            <i class="fas fa-phone"></i>
-            <i class="fab fa-usb"></i>
+            <div class="icons">
+              <i class="fas fa-wifi"></i>
+              <i class="fas fa-tv"></i>
+              <i class="fas fa-shower"></i>
+              <img src="./images/dryer.svg" alt="hairdryer" />
+              <img src="./images/towel.svg" alt="towel" />
+              <i class="fas fa-mug-hot"></i>
+              <i class="fas fa-phone"></i>
+              <i class="fab fa-usb"></i>
+            </div>
+          </div>
+
+          <div class="price">
+            <p>From</p>
+            <h1 class="cost">£65</h1>
+            <button class="more_info">More Info</button>
+          </div>
         </div>
-    </div>
 
-<div class="price">
-    <p>From</p>
-    <h1 class="cost">£99</h1>
-    <button class="more_info">More Info</button>
-</div>
-</div>
+        <div class="room double">
+          <div class="pic"></div>
 
-<div class="room">
-    <div class="pic"></div>
-    
-    <div class="info">
-        <h2 class="name">Triple Stunning Sea View Room 403</h2>
-        <p>
-            This large room has a spectacular view overlooking Shanklin beach. It has neutral decor with quality beds and bedding. It is equipped with a modern shower en suite and tea and coffee making facilities. To complement the room, it's furnished with coffee table and chairs looking out to the Sea. It's one of our best Sea View room with high ceilings!!</p>
-        <ul>
-            <li>Size: 167sqft</li>
-            <li>Beds: 1 Double(s), 1 Single(s)</li>
-        </ul>
+          <div class="info">
+            <h2 class="name">Double Side Sea View Room 302</h2>
+            <p>
+              This bright room has a beautiful view of the sea, a large modern
+              bath and shower en-suite, a quality bed and bedding and is
+              provided with tea/coffee making facilities.
+            </p>
+            <ul>
+              <li>Size: 91sqft</li>
+              <li>Beds: 1 King(s)</li>
+            </ul>
 
-        <div class="icons">
-            <i class="fas fa-wifi"></i>
-            <i class="fas fa-tv"></i>
-            <i class="fas fa-shower"></i>
-            <img src="./images/dryer.svg" alt="hairdryer">
-            <img src="./images/towel.svg" alt="towel">
-            <i class="fas fa-mug-hot"></i>
-            <i class="fas fa-phone"></i>
-            <i class="fab fa-usb"></i>
+            <div class="icons">
+              <i class="fas fa-wifi"></i>
+              <i class="fas fa-tv"></i>
+              <i class="fas fa-bath"></i>
+              <img src="./images/dryer.svg" alt="hairdryer" />
+              <img src="./images/towel.svg" alt="towel" />
+              <i class="fas fa-mug-hot"></i>
+              <i class="fas fa-phone"></i>
+              <i class="fab fa-usb"></i>
+            </div>
+          </div>
+
+          <div class="price">
+            <p>From</p>
+            <h1 class="cost">£99</h1>
+            <button class="more_info">More Info</button>
+          </div>
         </div>
-    </div>
 
-<div class="price">
-    <p>From</p>
-    <h1 class="cost">£155</h1>
-    <button class="more_info">More Info</button>
-</div>
-</div>
+        <div class="room double">
+          <div class="pic"></div>
 
-<div class="room">
-    <div class="pic"></div>
-    
-    <div class="info">
-        <h2 class="name">Double Front Sea View Room 404</h2>
-        <p>
-            Gorgeous room with high ceilings and a superb view of the sea, a shower en-suite, quality bed and bedding and is provided with tea/coffee making facilities. It' one of our best Sea View room!!</p>
-        <ul>
-            <li>Size: 140sqft</li>
-            <li>Beds: 1 King(s)</li>
-        </ul>
+          <div class="info">
+            <h2 class="name">Double Side Sea View Room 303</h2>
+            <p>
+              This double room has a beautiful view of the sea, a shower
+              en-suite, a quality bed and bedding and is provided with
+              tea/coffee making facilities.
+            </p>
+            <ul>
+              <li>Size: 108sqft</li>
+              <li>Beds: 1 King(s)</li>
+            </ul>
 
-        <div class="icons">
-            <i class="fas fa-wifi"></i>
-            <i class="fas fa-tv"></i>
-            <i class="fas fa-shower"></i>
-            <img src="./images/dryer.svg" alt="hairdryer">
-            <img src="./images/towel.svg" alt="towel">
-            <i class="fas fa-mug-hot"></i>
-            <i class="fas fa-phone"></i>
-            <i class="fab fa-usb"></i>
+            <div class="icons">
+              <i class="fas fa-wifi"></i>
+              <i class="fas fa-tv"></i>
+              <i class="fas fa-shower"></i>
+              <img src="./images/dryer.svg" alt="hairdryer" />
+              <img src="./images/towel.svg" alt="towel" />
+              <i class="fas fa-mug-hot"></i>
+              <i class="fas fa-phone"></i>
+              <i class="fab fa-usb"></i>
+            </div>
+          </div>
+
+          <div class="price">
+            <p>From</p>
+            <h1 class="cost">£99</h1>
+            <button class="more_info">More Info</button>
+          </div>
         </div>
-    </div>
 
-<div class="price">
-    <p>From</p>
-    <h1 class="cost">£125</h1>
-    <button class="more_info">More Info</button>
-</div>
-</div>
+        <div class="room double">
+          <div class="pic"></div>
 
-<div class="room">
-    <div class="pic"></div>
-    
-    <div class="info">
-        <h2 class="name">Triple Stunning Sea View Room 405</h2>
-        <p>
-            This spacious room has a beautiful view of the sea with high ceilings, a modern bath and shower en-suite, quality beds and bedding and is provided with tea/coffee making facilities. It's one of our best Sea View Room!!</p>
-        <ul>
-            <li>Size: 183sqft</li>
-            <li>Beds: 1 King(s), 1 Single(s)</li>
-        </ul>
+          <div class="info">
+            <h2 class="name">Twin Side Sea View Room 401</h2>
+            <p>
+              This room has a great view of the sea and cliff. It comes with
+              quality bed and bedding, modern bath and shower en-suite and
+              tea/coffee making facilities.
+            </p>
+            <ul>
+              <li>Size: 113sqft</li>
+              <li>Beds: 2 Single(s)</li>
+            </ul>
 
-        <div class="icons">
-            <i class="fas fa-wifi"></i>
-            <i class="fas fa-tv"></i>
-            <i class="fas fa-bath"></i>
-            <img src="./images/dryer.svg" alt="hairdryer">
-            <img src="./images/towel.svg" alt="towel">
-            <i class="fas fa-mug-hot"></i>
-            <i class="fas fa-phone"></i>
-            <i class="fab fa-usb"></i>
+            <div class="icons">
+              <i class="fas fa-wifi"></i>
+              <i class="fas fa-tv"></i>
+              <i class="fas fa-bath"></i>
+              <img src="./images/dryer.svg" alt="hairdryer" />
+              <img src="./images/towel.svg" alt="towel" />
+              <i class="fas fa-mug-hot"></i>
+              <i class="fas fa-phone"></i>
+              <i class="fab fa-usb"></i>
+            </div>
+          </div>
+
+          <div class="price">
+            <p>From</p>
+            <h1 class="cost">£99</h1>
+            <button class="more_info">More Info</button>
+          </div>
         </div>
-    </div>
 
-<div class="price">
-    <p>From</p>
-    <h1 class="cost">£155</h1>
-    <button class="more_info">More Info</button>
-</div>
-</div>
+        <div class="room double">
+          <div class="pic"></div>
 
-<div class="room">
-    <div class="pic"></div>
-    
-    <div class="info">
-        <h2 class="name">Double Side Sea View Room 406</h2>
-        <p>This bright room has a slight view of the sea, a modern bath and shower en-suite, a quality beds and bedding and is provided with tea/coffee making facilities.</p>
-        <ul>
-            <li>Size: 118sqft</li>
-            <li>Beds: 1 Double(s)</li>
-        </ul>
+          <div class="info">
+            <h2 class="name">Double Side Sea View Room 402</h2>
+            <p>
+              This room has a side view of the sea, with a modern shower
+              en-suite and a tap basin in the room, as well as a comfortable bed
+              and bedding. It is also provided with tea and coffee making
+              facilities.
+            </p>
+            <ul>
+              <li>Size: 113sqft</li>
+              <li>Beds: 1 Double(s)</li>
+            </ul>
 
-        <div class="icons">
-            <i class="fas fa-wifi"></i>
-            <i class="fas fa-tv"></i>
-            <i class="fas fa-bath"></i>
-            <img src="./images/dryer.svg" alt="hairdryer">
-            <img src="./images/towel.svg" alt="towel">
-            <i class="fas fa-mug-hot"></i>
-            <i class="fas fa-phone"></i>
-            <i class="fab fa-usb"></i>
+            <div class="icons">
+              <i class="fas fa-wifi"></i>
+              <i class="fas fa-tv"></i>
+              <i class="fas fa-shower"></i>
+              <img src="./images/dryer.svg" alt="hairdryer" />
+              <img src="./images/towel.svg" alt="towel" />
+              <i class="fas fa-mug-hot"></i>
+              <i class="fas fa-phone"></i>
+              <i class="fab fa-usb"></i>
+            </div>
+          </div>
+
+          <div class="price">
+            <p>From</p>
+            <h1 class="cost">£99</h1>
+            <button class="more_info">More Info</button>
+          </div>
         </div>
-    </div>
 
-<div class="price">
-    <p>From</p>
-    <h1 class="cost">£105</h1>
-    <button class="more_info">More Info</button>
-</div>
-</div>
+        <div class="room triple">
+          <div class="pic"></div>
 
-<div class="room">
-    <div class="pic"></div>
-    
-    <div class="info">
-        <h2 class="name">Penthouse Sea View Suite 501 (3 Rooms)</h2>
-        <p>This a spectacular large penthouse suite comes with 3 separate rooms, and has a breath taking view of the sea and Shanklin/Sandown beach from all 3 rooms (2 single and 1 double room). It is the only penthouse suite we have in the hotel. It has a shower en-suite, luxury bedding throughout, and tea/coffee making facilities. Ideal for family or friends looking for privet self contain flat!!</p>
-        <ul>
-            <li>Size: 323sqft</li>
-            <li>Beds: 1 King(s), 2 Single(s)</li>
-        </ul>
+          <div class="info">
+            <h2 class="name">Triple Stunning Sea View Room 403</h2>
+            <p>
+              This large room has a spectacular view overlooking Shanklin beach.
+              It has neutral decor with quality beds and bedding. It is equipped
+              with a modern shower en suite and tea and coffee making
+              facilities. To complement the room, it's furnished with coffee
+              table and chairs looking out to the Sea. It's one of our best Sea
+              View room with high ceilings!!
+            </p>
+            <ul>
+              <li>Size: 167sqft</li>
+              <li>Beds: 1 Double(s), 1 Single(s)</li>
+            </ul>
 
-        <div class="icons">
-            <i class="fas fa-wifi"></i>
-            <i class="fas fa-tv"></i>
-            <i class="fas fa-shower"></i>
-            <img src="./images/dryer.svg" alt="hairdryer">
-            <img src="./images/towel.svg" alt="towel">
-            <i class="fas fa-mug-hot"></i>
-            <i class="fas fa-phone"></i>
-            <i class="fab fa-usb"></i>
+            <div class="icons">
+              <i class="fas fa-wifi"></i>
+              <i class="fas fa-tv"></i>
+              <i class="fas fa-shower"></i>
+              <img src="./images/dryer.svg" alt="hairdryer" />
+              <img src="./images/towel.svg" alt="towel" />
+              <i class="fas fa-mug-hot"></i>
+              <i class="fas fa-phone"></i>
+              <i class="fab fa-usb"></i>
+            </div>
+          </div>
+
+          <div class="price">
+            <p>From</p>
+            <h1 class="cost">£155</h1>
+            <button class="more_info">More Info</button>
+          </div>
         </div>
-    </div>
 
-<div class="price">
-    <p>From</p>
-    <h1 class="cost">£190</h1>
-    <button class="more_info">More Info</button>
-</div>
-</div>
+        <div class="room double">
+          <div class="pic"></div>
 
-<div class="room">
-    <div class="pic"></div>
-    
-    <div class="info">
-        <h2 class="name">Triple Penthouse Sea View Room 502</h2>
-        <p>
-            This breathtaking sea view room comes with a birds eye view over looking Shanklin and Sandown Beach. It has a modern bath and shower en-suite, furnished with luxury bedding, and has tea/coffee making facilities. It's one of our best Sea View room!!</p>
-        <ul>
-            <li>Size: 167sqft</li>
-            <li>Beds: 1 Double(s), 1 Single(s)</li>
-        </ul>
+          <div class="info">
+            <h2 class="name">Double Front Sea View Room 404</h2>
+            <p>
+              Gorgeous room with high ceilings and a superb view of the sea, a
+              shower en-suite, quality bed and bedding and is provided with
+              tea/coffee making facilities. It' one of our best Sea View room!!
+            </p>
+            <ul>
+              <li>Size: 140sqft</li>
+              <li>Beds: 1 King(s)</li>
+            </ul>
 
-        <div class="icons">
-            <i class="fas fa-wifi"></i>
-            <i class="fas fa-tv"></i>
-            <i class="fas fa-bath"></i>
-            <img src="./images/dryer.svg" alt="hairdryer">
-            <img src="./images/towel.svg" alt="towel">
-            <i class="fas fa-mug-hot"></i>
-            <i class="fas fa-phone"></i>
-            <i class="fab fa-usb"></i>
+            <div class="icons">
+              <i class="fas fa-wifi"></i>
+              <i class="fas fa-tv"></i>
+              <i class="fas fa-shower"></i>
+              <img src="./images/dryer.svg" alt="hairdryer" />
+              <img src="./images/towel.svg" alt="towel" />
+              <i class="fas fa-mug-hot"></i>
+              <i class="fas fa-phone"></i>
+              <i class="fab fa-usb"></i>
+            </div>
+          </div>
+
+          <div class="price">
+            <p>From</p>
+            <h1 class="cost">£125</h1>
+            <button class="more_info">More Info</button>
+          </div>
         </div>
-    </div>
 
-<div class="price">
-    <p>From</p>
-    <h1 class="cost">£150</h1>
-    <button class="more_info">More Info</button>
-</div>
-</div>
+        <div class="room triple">
+          <div class="pic"></div>
 
+          <div class="info">
+            <h2 class="name">Triple Stunning Sea View Room 405</h2>
+            <p>
+              This spacious room has a beautiful view of the sea with high
+              ceilings, a modern bath and shower en-suite, quality beds and
+              bedding and is provided with tea/coffee making facilities. It's
+              one of our best Sea View Room!!
+            </p>
+            <ul>
+              <li>Size: 183sqft</li>
+              <li>Beds: 1 King(s), 1 Single(s)</li>
+            </ul>
 
+            <div class="icons">
+              <i class="fas fa-wifi"></i>
+              <i class="fas fa-tv"></i>
+              <i class="fas fa-bath"></i>
+              <img src="./images/dryer.svg" alt="hairdryer" />
+              <img src="./images/towel.svg" alt="towel" />
+              <i class="fas fa-mug-hot"></i>
+              <i class="fas fa-phone"></i>
+              <i class="fab fa-usb"></i>
+            </div>
+          </div>
 
-<div class="room">
-    <div class="pic"></div>
-    
-    <div class="info">
-        <h2 class="name">Empire State Room (Decking With Sea View)</h2>
-        <p>
-            This breath taking side sea view room with decking and outside space is the highlight of the room. This room comes with high ceiling, quality furniture and a luxury bathroom fitted with jacuzzi corner bathtub. There is a direct access to the privet decking from the room. It has one king-size bed and a daytime bed with guest bed. This is one of our very best room!!</p>
-        <ul>
-            <li>Size: 230sqft</li>
-            <li>Beds: 2 King(s), 2 Single(s)</li>
-        </ul>
-
-        <div class="icons">
-            <i class="fas fa-wifi"></i>
-            <i class="fas fa-tv"></i>
-            <img class="work" src="./images/workspace.jpg" alt="work space">
-            <img class="fridge" src="./images/fridge.png" alt="mini fridge">
-            <i class="fas fa-bath"></i>
-            <img src="./images/dryer.svg" alt="hairdryer">
-            <img src="./images/towel.svg" alt="towel">
-            <i class="fas fa-mug-hot"></i>
-            <i class="fas fa-phone"></i>
-            <i class="fab fa-usb"></i>
+          <div class="price">
+            <p>From</p>
+            <h1 class="cost">£155</h1>
+            <button class="more_info">More Info</button>
+          </div>
         </div>
-    </div>
 
-<div class="price">
-    <p>From</p>
-    <h1 class="cost">£210</h1>
-    <button class="more_info">More Info</button>
-</div>
-</div>
-</div>
-</section>
+        <div class="room double">
+          <div class="pic"></div>
 
+          <div class="info">
+            <h2 class="name">Double Side Sea View Room 406</h2>
+            <p>
+              This bright room has a slight view of the sea, a modern bath and
+              shower en-suite, a quality beds and bedding and is provided with
+              tea/coffee making facilities.
+            </p>
+            <ul>
+              <li>Size: 118sqft</li>
+              <li>Beds: 1 Double(s)</li>
+            </ul>
 
+            <div class="icons">
+              <i class="fas fa-wifi"></i>
+              <i class="fas fa-tv"></i>
+              <i class="fas fa-bath"></i>
+              <img src="./images/dryer.svg" alt="hairdryer" />
+              <img src="./images/towel.svg" alt="towel" />
+              <i class="fas fa-mug-hot"></i>
+              <i class="fas fa-phone"></i>
+              <i class="fab fa-usb"></i>
+            </div>
+          </div>
 
-<button  onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-chevron-up"></i></button>
+          <div class="price">
+            <p>From</p>
+            <h1 class="cost">£105</h1>
+            <button class="more_info">More Info</button>
+          </div>
+        </div>
 
+        <div class="room family">
+          <div class="pic"></div>
 
+          <div class="info">
+            <h2 class="name">Penthouse Sea View Suite 501 (3 Rooms)</h2>
+            <p>
+              This a spectacular large penthouse suite comes with 3 separate
+              rooms, and has a breath taking view of the sea and
+              Shanklin/Sandown beach from all 3 rooms (2 single and 1 double
+              room). It is the only penthouse suite we have in the hotel. It has
+              a shower en-suite, luxury bedding throughout, and tea/coffee
+              making facilities. Ideal for family or friends looking for privet
+              self contain flat!!
+            </p>
+            <ul>
+              <li>Size: 323sqft</li>
+              <li>Beds: 1 King(s), 2 Single(s)</li>
+            </ul>
 
-<section id="contact">
-    <div class="contact">
+            <div class="icons">
+              <i class="fas fa-wifi"></i>
+              <i class="fas fa-tv"></i>
+              <i class="fas fa-shower"></i>
+              <img src="./images/dryer.svg" alt="hairdryer" />
+              <img src="./images/towel.svg" alt="towel" />
+              <i class="fas fa-mug-hot"></i>
+              <i class="fas fa-phone"></i>
+              <i class="fab fa-usb"></i>
+            </div>
+          </div>
+
+          <div class="price">
+            <p>From</p>
+            <h1 class="cost">£190</h1>
+            <button class="more_info">More Info</button>
+          </div>
+        </div>
+
+        <div class="room triple">
+          <div class="pic"></div>
+
+          <div class="info">
+            <h2 class="name">Triple Penthouse Sea View Room 502</h2>
+            <p>
+              This breathtaking sea view room comes with a birds eye view over
+              looking Shanklin and Sandown Beach. It has a modern bath and
+              shower en-suite, furnished with luxury bedding, and has tea/coffee
+              making facilities. It's one of our best Sea View room!!
+            </p>
+            <ul>
+              <li>Size: 167sqft</li>
+              <li>Beds: 1 Double(s), 1 Single(s)</li>
+            </ul>
+
+            <div class="icons">
+              <i class="fas fa-wifi"></i>
+              <i class="fas fa-tv"></i>
+              <i class="fas fa-bath"></i>
+              <img src="./images/dryer.svg" alt="hairdryer" />
+              <img src="./images/towel.svg" alt="towel" />
+              <i class="fas fa-mug-hot"></i>
+              <i class="fas fa-phone"></i>
+              <i class="fab fa-usb"></i>
+            </div>
+          </div>
+
+          <div class="price">
+            <p>From</p>
+            <h1 class="cost">£150</h1>
+            <button class="more_info">More Info</button>
+          </div>
+        </div>
+
+        <div class="room empire">
+          <div class="pic"></div>
+
+          <div class="info">
+            <h2 class="name">Empire State Room (Decking With Sea View) 503</h2>
+            <p>
+              This breath taking side sea view room with decking and outside
+              space is the highlight of the room. This room comes with high
+              ceiling, quality furniture and a luxury bathroom fitted with
+              jacuzzi corner bathtub. There is a direct access to the privet
+              decking from the room. It has one king-size bed and a daytime bed
+              with guest bed. This is one of our very best room!!
+            </p>
+            <ul>
+              <li>Size: 230sqft</li>
+              <li>Beds: 2 King(s), 2 Single(s)</li>
+            </ul>
+
+            <div class="icons">
+              <i class="fas fa-wifi"></i>
+              <i class="fas fa-tv"></i>
+              <img class="work" src="./images/workspace.jpg" alt="work space" />
+              <img class="fridge" src="./images/fridge.png" alt="mini fridge" />
+              <i class="fas fa-bath"></i>
+              <img src="./images/dryer.svg" alt="hairdryer" />
+              <img src="./images/towel.svg" alt="towel" />
+              <i class="fas fa-mug-hot"></i>
+              <i class="fas fa-phone"></i>
+              <i class="fab fa-usb"></i>
+            </div>
+          </div>
+
+          <div class="price">
+            <p>From</p>
+            <h1 class="cost">£210</h1>
+            <button class="more_info">More Info</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <section id="contact">
+      <div class="contact">
         <h1>Contact Us</h1>
         <div class="details">
-            <p>Tel: 01983862814</p>
-            <p>info@villamentonehotel.co.uk </p>
-            <p>11 Park Road, Shanklin, Isle Of Wight, PO37 6AY</p>
+          <p>Tel: 01983862814</p>
+          <p>info@villamentonehotel.co.uk</p>
+          <p>11 Park Road, Shanklin, Isle Of Wight, PO37 6AY</p>
         </div>
-    </div>
-    <div class="form">
-        <input type="text" id="name" name="name" placeholder="Name *" required>
-        <input type="email" id="email" name="email" placeholder="Email *" required>
-        <input type="text" name="subject" placeholder="Subject" required>
-        <textarea name="message" rows="8" cols="50" placeholder="Message"></textarea>
+      </div>
+      <div class="form">
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Name *"
+          required
+        />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Email *"
+          required
+        />
+        <input type="text" name="subject" placeholder="Subject" required />
+        <textarea
+          name="message"
+          rows="8"
+          cols="50"
+          placeholder="Message"
+        ></textarea>
         <button class="submit">Send</button>
-    </div>
-    <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20246.27984088186!2d-1.1908427613356882!3d50.63111107950076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48748bb55f3a3313%3A0x9918522346e15f1!2sThe%20Villa%20Mentone%20Hotel!5e0!3m2!1sen!2suk!4v1607880165229!5m2!1sen!2suk" width="1500" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-    </div>
+      </div>
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20246.27984088186!2d-1.1908427613356882!3d50.63111107950076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48748bb55f3a3313%3A0x9918522346e15f1!2sThe%20Villa%20Mentone%20Hotel!5e0!3m2!1sen!2suk!4v1607880165229!5m2!1sen!2suk"
+          width="1500"
+          height="500"
+          frameborder="0"
+          style="border: 0"
+          allowfullscreen=""
+          aria-hidden="false"
+          tabindex="0"
+        ></iframe>
+      </div>
     </section>
-    
-    
+
     <footer id="footer">
-        <p>© Villa Mentone Hotel</p>
+      <p>© Villa Mentone Hotel</p>
     </footer>
 
-
-
-    <script>
-        var mybutton = document.getElementById("myBtn");
-        
-        window.onscroll = function() {scrollFunction()};
-        
-        function scrollFunction() {
-          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            mybutton.style.display = "block";
-          } else {
-            mybutton.style.display = "none";
-          }
-        }
-    
-        function topFunction() {
-          document.body.scrollTop = 0;
-          document.documentElement.scrollTop = 0;
-        }
-        </script>
-</body>
+    <script src="filter.js"></script>
+    <script src="scroll.js"></script>
+  </body>
 </html>
