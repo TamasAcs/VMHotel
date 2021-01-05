@@ -1,11 +1,3 @@
-
-
-
-
-
-
-
-
 /* 
 function filterRoom(e) {
     const list = rooms;
@@ -47,7 +39,6 @@ function filterRoom(e) {
     })
 }
 */
-
 
 /*
 var filter = {
@@ -99,8 +90,7 @@ dp.onRowFilter = function(args) {
 };
   */
 
-
-    /*
+/*
 const rooms = [
     {name: "Room 1", id: "R1", size: 4},
     {name: "Room 2", id: "R2", size: 2},
@@ -141,65 +131,60 @@ const doubleRoom = rooms.filter(double => double.size = 2);
 const singleRoom = rooms.filter(single => single.size = 1);
 */
 
-
-
 /*const roomAdult = document.getElementById('adult');
 const rows = document.querySelectorAll("room"); 
 const button = document.getElementsByClassName('.rooms_search');*/
-const filterOption = document.querySelector('.filter-people');
-const rooms = document.querySelectorAll('.room');
+const filterOption = document.querySelector(".filter-people");
+const rooms = document.querySelectorAll(".room");
 
-filterOption.addEventListener('click', filterPeople);
+filterOption.addEventListener("change", filterPeople);
 /*roomAdult.addEventListener("change", family);
 button.addEventListener('click', filter);*/
 
 function filterPeople(e) {
-   
-    rooms.forEach(function (room) {
-            switch (e.target.value) {
-                case "4+":
-                    if (room.classList.contains("empire")) {
-                        room.style.display = 'flex';
-                        break;
-                    } else {
-                        room.style.display = 'none';
-                    }
-                case "4":
-                    if (room.classList.contains("family")) {
-                        room.style.display = 'flex';
-                        break;
-                    } else {
-                        room.style.display = 'none';
-                    }
-                case "3":
-                    if (room.classList.contains("triple")) {
-                        room.style.display = 'flex';
-                        break;
-                    } else {
-                        room.style.display = 'none';
-                    }
-                case "2":
-                    if (room.classList.contains("double")) {
-                        room.style.display = 'flex';
-                        console.log("true")
-                        console.log({room})
-                        break;
-                    } else {
-                        room.style.display = 'none';
-                    }
-                case "1":
-                    if (room.classList.contains("single")) {
-                        room.style.display = 'flex';
-                        break;
-                    } else {
-                        room.style.display = 'none';
-                    }
-            }
-        })
+  rooms.forEach(function (room) {
+    switch (e.target.value) {
+      case "select":
+        room.style.display = "flex";
+        break;
+      case "4+":
+        if (room.classList.contains("empire")) {
+          room.style.display = "flex";
+        } else {
+          room.style.display = "none";
+        }
+        break;
+      case "4":
+        if (room.classList.contains("family")) {
+          room.style.display = "flex";
+        } else {
+          room.style.display = "none";
+        }
+        break;
+      case "3":
+        if (room.classList.contains("triple")) {
+          room.style.display = "flex";
+        } else {
+          room.style.display = "none";
+        }
+        break;
+      case "2":
+        if (room.classList.contains("double")) {
+          room.style.display = "flex";
+        } else {
+          room.style.display = "none";
+        }
+        break;
+      case "1":
+        if (room.classList.contains("single")) {
+          room.style.display = "flex";
+        } else {
+          room.style.display = "none";
+        }
+        break;
     }
-
-
-
+  });
+}
 
 /*
 const roomAdult = document.getElementById('adult');
@@ -262,10 +247,6 @@ function filter(e) {
 }
 */
 
-
-
-
-
 /*
 filterSelection("room")
 function filterSelection(c) {
@@ -299,7 +280,6 @@ function w3RemoveClass(element, name) {
   element.className = arr1.join(" ");
 }
 */
-
 
 /*
 $(document).ready(function()
